@@ -3,3 +3,10 @@
 ################################################################################
 
 /Practice/.vs/Practice/v16
+/Practice/Practice/obj
+/Practice/Middleware/obj/Debug/netcoreapp3.1
+/Practice/Middleware/obj
+/Practice/Practice/bin/Debug/netcoreapp3.1
+/Practice/.vs/Practice/config
+/Practice/.vs/Practice/DesignTimeBuild
+/.vs
