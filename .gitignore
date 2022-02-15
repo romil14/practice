@@ -12,3 +12,5 @@
 /.vs
 /Practice/Filters/bin/Debug/netcoreapp3.1
 /Practice/Filters/obj
+/Practice/AspNetCoreDISample/bin/Debug/netcoreapp3.1
+/Practice/AspNetCoreDISample/obj
