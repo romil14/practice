@@ -1,4 +1,5 @@
-﻿using Filters.Models;
+﻿using Filters.Custome.Filters;
+using Filters.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace Filters.Controllers
 {
+    //Controller Level
+    //[CustomAuthorizationFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -17,12 +20,13 @@ namespace Filters.Controllers
         {
             _logger = logger;
         }
-
+    
         public IActionResult Index()
         {
             return View();
         }
-
+        // Action Level
+        //[CustomAuthorizationFilter]
         public IActionResult Privacy()
         {
             return View();
