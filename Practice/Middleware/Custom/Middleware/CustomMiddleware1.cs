@@ -24,7 +24,7 @@ namespace Middleware.Custom.Middleware
             //httpContext.Response.WriteAsync("Custome Middleware!");
             //return _next(httpContext);
 
-            await httpContext.Response.WriteAsync("Custome Middleware!");
+            //await httpContext.Response.WriteAsync("Custome Middleware!");
             await _next(httpContext);
         }
     }
