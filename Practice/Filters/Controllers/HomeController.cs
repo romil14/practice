@@ -12,10 +12,12 @@ using System.Threading.Tasks;
 namespace Filters.Controllers
 {
     //Controller Level
-    [CustomAuthorizationFilter]
-    [CustomResourceFilter]
-    [CustomActionFilter]
-    [CustomResultFilter]
+    //[CustomAuthorizationFilter(Role = "Admin")]
+    //[CustomResourceFilter]
+    //[CustomActionFilter]
+    //[CustomResultFilter]
+
+    //[CustomExceptionFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -27,7 +29,9 @@ namespace Filters.Controllers
     
         public IActionResult Index()
         {
-            HttpContext.Response.WriteAsync("Action Execuation => ");
+            //HttpContext.Response.WriteAsync("Action Execuation => ");
+
+            //throw new ArgumentNullException();
             return View();
         }
         // Action Level

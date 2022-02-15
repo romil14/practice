@@ -12,12 +12,19 @@ namespace Filters.Custome.Filters
         //After
         public void OnActionExecuted(ActionExecutedContext context)
         {
+            var user = context.HttpContext.User;
+            var action = context.ActionDescriptor.DisplayName;
+            var controller = context.Controller.ToString();
             context.HttpContext.Response.WriteAsync("Action (after) => ");
         }
 
         //Before
         public void OnActionExecuting(ActionExecutingContext context)
         {
+            var user = context.HttpContext.User;
+            var action = context.ActionDescriptor.DisplayName;
+            var controller = context.Controller.ToString();
+
             context.HttpContext.Response.WriteAsync("Action (before) => ");
         }
     }
