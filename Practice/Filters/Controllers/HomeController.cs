@@ -1,5 +1,6 @@
 ﻿using Filters.Custome.Filters;
 using Filters.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,7 +12,10 @@ using System.Threading.Tasks;
 namespace Filters.Controllers
 {
     //Controller Level
-    //[CustomAuthorizationFilter]
+    [CustomAuthorizationFilter]
+    [CustomResourceFilter]
+    [CustomActionFilter]
+    [CustomResultFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -23,6 +27,7 @@ namespace Filters.Controllers
     
         public IActionResult Index()
         {
+            HttpContext.Response.WriteAsync("Action Execuation => ");
             return View();
         }
         // Action Level
