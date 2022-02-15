@@ -31,25 +31,25 @@ namespace Middleware
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            //Custom Middleware 
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Middleware A (before) => ");
-                await next();
-                await context.Response.WriteAsync("Middleware A (after).");
-            });
+            ////Custom Middleware 
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware A (before) => ");
+            //    await next();
+            //    await context.Response.WriteAsync("Middleware A (after).");
+            //});
 
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Middleware B (before) => ");
-                await next();
-                await context.Response.WriteAsync("Middelware B (after) => ");               
-            });
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware B (before) => ");
+            //    await next();
+            //    await context.Response.WriteAsync("Middelware B (after) => ");               
+            //});
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Middleware C => ");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware C => ");
+            //});
 
 
             if (env.IsDevelopment())
