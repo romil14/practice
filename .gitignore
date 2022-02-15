@@ -10,3 +10,5 @@
 /Practice/.vs/Practice/config
 /Practice/.vs/Practice/DesignTimeBuild
 /.vs
+/Practice/Filters/bin/Debug/netcoreapp3.1
+/Practice/Filters/obj
